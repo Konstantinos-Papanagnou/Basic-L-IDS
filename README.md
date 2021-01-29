@@ -2,18 +2,20 @@
  Basic Log Intrusion Detection System for Apache2 servers running on Linux
 
 # Configure for your own server.
-** Adviced **
+### **Adviced**
 Take a look at your server logs and check for weird requests. Mark them as attacks in your head.
 After having a good idea of what you consider an attack/enumeration you can edit the detector.py script to add your own blacklists/whitelists.
 
 # Setup:
 Add the script inside a home directory you will run it from. 
-** Important ** 
+
+### **Important** 
 Make sure the permissions on all the scripts and the folder containing the scripts is 600. chmod -r 600 Basic-L-IDS/
 
 In order to fire up the script you need to execute python3 logreader.py
 This will fire up the script
-** Note **
+
+### **Note**
 The script requires root permissions to execute because it is reading the logs from /var/log
 You should be able to change the permissions of apache2 logs to the current user but it is not recommended.
 The best way to run the script is as root.
